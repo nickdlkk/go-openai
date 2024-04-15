@@ -215,7 +215,8 @@ type ChatCompletionRequest struct {
 	FunctionCall any    `json:"function_call,omitempty"`
 	Tools        []Tool `json:"tools,omitempty"`
 	// This can be either a string or an ToolChoice object.
-	ToolChoice any `json:"tool_choice,omitempty"`
+	ToolChoice any  `json:"tool_choice,omitempty"`
+	UseSearch  bool `json:"use_search,omitempty"` // kimi是否开启联网搜索
 }
 
 type ToolType string
